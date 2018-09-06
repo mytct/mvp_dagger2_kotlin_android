@@ -1,6 +1,6 @@
 package optick.elisoft.com.newconoptik.ui.core.contract
 
-interface CoreContractListener{
+interface ICoreInteractor{
     fun isUserLogged(): Boolean
     fun performUserLogout()
 }

@@ -3,13 +3,12 @@ package optick.elisoft.com.newconoptik.ui.login.view
 import kotlinx.android.synthetic.main.activity_login.*
 import optick.elisoft.com.newconoptik.R
 import optick.elisoft.com.newconoptik.ui.core.view.CoreActivity
-import optick.elisoft.com.newconoptik.ui.login.contract.LoginContract
-import optick.elisoft.com.newconoptik.ui.login.contract.LoginContractListener
+import optick.elisoft.com.newconoptik.ui.login.contract.ILoginInteractor
 import optick.elisoft.com.newconoptik.ui.login.presenter.LoginPresenter
 import optick.elisoft.com.newconoptik.util.AppConstants
 import javax.inject.Inject
 
-class LoginActivity : CoreActivity(), LoginView{
+class LoginActivity : CoreActivity(), ILoginView{
     override fun initPresenter() {
         presenter.onAttach(this)
     }
@@ -29,7 +28,7 @@ class LoginActivity : CoreActivity(), LoginView{
     }
 
     @Inject
-    lateinit var presenter: LoginPresenter<LoginView, LoginContractListener>
+    lateinit var presenter: LoginPresenter<ILoginView, ILoginInteractor>
 
     override fun onFragmentAttached() {
     }

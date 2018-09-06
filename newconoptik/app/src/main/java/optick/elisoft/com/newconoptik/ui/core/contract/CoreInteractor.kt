@@ -3,7 +3,7 @@ package optick.elisoft.com.newconoptik.ui.core.contract
 import optick.elisoft.com.newconoptik.data.preferences.PreferenceHelper
 import optick.elisoft.com.newconoptik.data.network.ApiHelper
 
-open class CoreContract(): CoreContractListener{
+open class CoreInteractor(): ICoreInteractor{
     protected lateinit var preferenceHelper: PreferenceHelper
     protected lateinit var apiHelper: ApiHelper
 

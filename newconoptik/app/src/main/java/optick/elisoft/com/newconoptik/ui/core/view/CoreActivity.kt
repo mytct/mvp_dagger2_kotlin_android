@@ -2,13 +2,12 @@ package optick.elisoft.com.newconoptik.ui.core.view
 
 import android.app.ProgressDialog
 import android.os.Bundle
-import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import dagger.android.AndroidInjection
 import optick.elisoft.com.newconoptik.util.AppConstants
 import optick.elisoft.com.newconoptik.util.CommonUtils
 
-abstract class CoreActivity: AppCompatActivity(), CoreView, CoreFragment.CallBack{
+abstract class CoreActivity: AppCompatActivity(), ICoreView, CoreFragment.CallBack{
     private var progressDialog: ProgressDialog?= null
 
     abstract fun getContentViewId(): Int

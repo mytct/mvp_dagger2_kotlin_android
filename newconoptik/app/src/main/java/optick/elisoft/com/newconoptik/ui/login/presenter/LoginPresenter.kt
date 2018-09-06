@@ -1,18 +1,17 @@
 package optick.elisoft.com.newconoptik.ui.login.presenter
 
-import android.util.Log
 import com.google.gson.Gson
 import io.reactivex.disposables.CompositeDisposable
 import optick.elisoft.com.newconoptik.ui.core.presenter.CorePresenter
-import optick.elisoft.com.newconoptik.ui.login.contract.LoginContractListener
-import optick.elisoft.com.newconoptik.ui.login.view.LoginView
+import optick.elisoft.com.newconoptik.ui.login.contract.ILoginInteractor
+import optick.elisoft.com.newconoptik.ui.login.view.ILoginView
 import optick.elisoft.com.newconoptik.util.AppConstants
 import optick.elisoft.com.newconoptik.util.SchedulerProvider
 import javax.inject.Inject
 
-class LoginPresenter<V : LoginView, I : LoginContractListener> @Inject internal constructor(
+class LoginPresenter<V : ILoginView, I : ILoginInteractor> @Inject internal constructor(
         contract: I, schedulerProvider: SchedulerProvider, disposable: CompositeDisposable) : CorePresenter<V,I>(
-        contract = contract, schedulerProvider = schedulerProvider, compsiteDisposable = disposable), LoginPresenterListener<V,I>{
+        contract = contract, schedulerProvider = schedulerProvider, compsiteDisposable = disposable), ILoginPresenter<V,I>{
 
     override fun onServerLoginClicked(email: String, password: String) {
         when{

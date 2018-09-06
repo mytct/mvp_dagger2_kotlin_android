@@ -7,7 +7,7 @@ import android.support.v4.app.Fragment
 import dagger.android.support.AndroidSupportInjection
 import optick.elisoft.com.newconoptik.util.CommonUtils
 
-abstract class CoreFragment: Fragment(), CoreView{
+abstract class CoreFragment: Fragment(), ICoreView{
     private var parentActivity: CoreActivity?= null
     private var progressDialog: ProgressDialog?= null
 

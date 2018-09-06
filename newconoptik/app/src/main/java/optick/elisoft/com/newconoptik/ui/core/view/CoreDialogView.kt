@@ -7,7 +7,7 @@ import android.support.v4.app.DialogFragment
 import dagger.android.support.AndroidSupportInjection
 import optick.elisoft.com.newconoptik.util.CommonUtils
 
-abstract class CoreDialogView: DialogFragment(), CoreDialogViewListener{
+abstract class CoreDialogView: DialogFragment(), ICoreDialogView{
     private var parentActivity: CoreActivity?= null
     private var progressDialog: ProgressDialog?= null
 

@@ -1,8 +1,8 @@
 package optick.elisoft.com.newconoptik.ui.login.view
 
-import optick.elisoft.com.newconoptik.ui.core.view.CoreView
+import optick.elisoft.com.newconoptik.ui.core.view.ICoreView
 
-interface LoginView : CoreView{
+interface ILoginView : ICoreView{
     fun showValidationMessage(errorCode: Int)
     fun openMainActivity()
 }
