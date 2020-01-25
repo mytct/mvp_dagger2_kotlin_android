@@ -15,8 +15,8 @@ abstract class CoreActivity: AppCompatActivity(), ICoreView, CoreFragment.CallBa
     abstract fun removePresenter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         initDI()
+        super.onCreate(savedInstanceState)
         setContentView(getContentViewId())
         initPresenter()
         initLayout()

@@ -29,8 +29,8 @@ abstract class CoreFragment: Fragment(), ICoreView{
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         initDI()
+        super.onCreate(savedInstanceState)
         setHasOptionsMenu(false)
     }
 
